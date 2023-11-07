@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +15,36 @@
             return respuesta
         }
     </script>
-    <h2 class="text-center p-3">Panel Dashboard</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-danger" id="headerNav">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto ">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#">DASHBOARD</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Usuario
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="login.php">Cambiar de cuenta</a></li>
+                <li><a class="dropdown-item" href="logout.php">Cerrar sesion</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <?php
         include "modelo/conexdashboard.php";
         include "controlador/eliminar_usuario.php";
         include "controlador/eliminar_proyecto.php";
     ?>
     <div class="container-fluid row">
-        <form class="col-4 p-3" method="POST">
+        <form class="col-4 p-4" method="POST">
             <h3 class="text-center text-secondary">Crear nuevo usuario</h3>
             <?php
                 include "modelo/conexdashboard.php";
@@ -40,11 +62,11 @@
                 <label for="exampleInputEmail1" class="form-label">Vigente</label>
                 <input type="text" class="form-control" name="vigente">
             </div>
-            <button type="submit" class="btn btn-primary" name="btncrear" value="ok">Crear</button>
+            <button type="submit" class="btn btn-primary" name="btncrear" value="ok"><i class="bi bi-plus"></i> Agregar</button>
         </form>
     <div class="col-8 p-5">
         <h3 class="text-center text-secondary">Tabla Usuarios</h3>
-        <table class="table table-bordered"> 
+        <table class="table table-bordered border-dark"> 
             <thead class="bg-info">
                 <tr>
                     <th scope="col">ID</th>
@@ -71,13 +93,12 @@
                     </tr>
                 <?php }
                 ?>
-    
             </tbody>
     </table>
     </div>
     </div>
     <div class="container-fluid row">
-        <form class="col-4 p-3" method="POST">
+        <form class="col-4 p-4" method="POST">
             <h3 class="text-center text-secondary">Crear nuevo proyecto</h3>
             <?php
                 include "modelo/conexdashboard.php";
@@ -99,11 +120,11 @@
                 <label for="exampleInputEmail1" class="form-label">Vigente</label>
                 <input type="text" class="form-control" name="vigente">
             </div>
-            <button type="submit" class="btn btn-primary" name="btncrear" value="ok">Crear</button>
+            <button type="submit" class="btn btn-primary" name="btncrear" value="ok"><i class="bi bi-plus"></i> Agregar</button>
         </form>
     <div class="col-8 p-5">
         <h3 class="text-center text-secondary">Tabla Proyectos</h3>
-        <table class="table table-bordered"> 
+        <table class="table table-bordered border-dark"> 
             <thead class="bg-info">
                 <tr>
                     <th scope="col">ID</th>

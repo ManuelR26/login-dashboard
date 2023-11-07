@@ -6,7 +6,7 @@ if (!empty($_POST["btningresar"])) {
     } else {
         $usuario = $_POST["usuario"];
         $clave = $_POST["password"];
-        $sql = $conexion->query("SELECT * FROM datos WHERE nombre = '$usuario' and contraseña = '$clave'");
+        $sql = $conexion->query("SELECT * FROM usuarios WHERE apodo = '$usuario' and clave = '$clave'");
         if ($datos = $sql->fetch_object()) {
             header("location:panel.php");
         } else {

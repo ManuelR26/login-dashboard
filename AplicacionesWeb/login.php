@@ -7,7 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <section class="vh-100 gradient-custom">
@@ -33,7 +33,7 @@
                 <input name="btningresar" class="btn btn-outline-light btn-lg px-5" type="submit" value="Iniciar">
             </div>
             <div>
-              <p class="mb-0">No tienes una cuenta? <a href="#!" class="text-white-50 fw-bold">Registrarse</a>
+              <p class="mb-0">No tienes una cuenta? <a href="register.php" class="text-white-50 fw-bold">Registrarse</a>
               </p>
             </div>
             </form>

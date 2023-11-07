@@ -5,7 +5,7 @@
             $apodo = $_POST["apodo"];
             $clave = $_POST["clave"];
             $vigente = $_POST["vigente"];
-            $sql = $conexion->query(" UPDATE usuarios SET apodo='$apodo', clave='$clave', vigente='$vigente' WHERE id=$id");
+            $sql = $conexion->query(" UPDATE usuarios SET apodo='$apodo', clave='$clave', vigente='$vigente' WHERE id = '$id'");
             if ($sql==1){
                 header("location:panel.php");
             } else {

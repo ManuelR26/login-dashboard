@@ -6,7 +6,7 @@
             $fecha_inicio = $_POST["fecha_inicio"];
             $fecha_termino = $_POST["fecha_termino"];
             $vigente = $_POST["vigente"];
-            $sql = $conexion->query(" UPDATE proyectos SET nombre='$nombre', fecha_inicio='$fecha_inicio', fecha_termino='$fecha_termino', vigente='$vigente' WHERE id=$id");
+            $sql = $conexion->query(" UPDATE proyectos SET nombre='$nombre', fecha_inicio='$fecha_inicio', fecha_termino='$fecha_termino', vigente='$vigente' WHERE id = '$id'");
             if ($sql==1){
                 header("location:panel.php");
             } else {
